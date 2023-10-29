@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+
+
+int  main (){
+    int a[5];
+    a[0]=1;
+    a[1]=2;
+    
+    cout<< "a: " <<a<< endl<< "&a[0] and &a[4] :"<<&a[0] << "," << &a[4];
+    cout << endl << *(a+1);
+    // another way to access. 
+    cout<<endl << 0[a];
+}
+
+// output-
+// a: 0x61fefc
+// &a[0] and &a[4] :0x61fefc,0x61ff0c
+// 2
+
+// it means  and a[0]  means same - and its adress.
+
+
+
