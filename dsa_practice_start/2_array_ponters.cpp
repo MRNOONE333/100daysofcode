@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-
+// this don't follows in  characters.
 int  main (){
     int a[5];
     a[0]=1;
@@ -11,6 +11,9 @@ int  main (){
     cout << endl << *(a+1);
     // another way to access. 
     cout<<endl << 0[a];
+
+    cout<< endl<<"size of a: " << sizeof(a); // this gives the size of array but gives adress of a[0].
+
 }
 
 // output-
