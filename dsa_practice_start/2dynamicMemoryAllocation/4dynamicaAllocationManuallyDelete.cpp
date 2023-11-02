@@ -13,7 +13,7 @@ int main(){
     delete []p;
     cout<<*p;
 
-    // address isn't deleted in any
+    // address isn't deleted in any the value is deleted .
 
 
 }
