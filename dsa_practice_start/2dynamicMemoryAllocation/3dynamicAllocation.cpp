@@ -30,9 +30,16 @@ int main(){
     cin>> n;
 
 
-   p_arr [0] =10;
+   p_arr [0] =9;
+   p_arr[1]= 20;
 
-   cout<< p_arr;
+   cout<< p_arr<<endl<< *p_arr <<endl<<p_arr[1];
+
+   for (int i =0;i<50; ++i ){
+    cout<< endl<<i;
+    cout << endl << p_arr[i];
+    delete[]p_arr;
+   }
 
 
 }

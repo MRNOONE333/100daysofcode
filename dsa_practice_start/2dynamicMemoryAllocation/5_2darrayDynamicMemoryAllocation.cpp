@@ -17,15 +17,24 @@ int main(){
      int ** p = new int*[10];
      for (int i=0; i<m ; i++){
         p[i]= new int [n];
-        for (int j=0; j<10; j++){ 
+        for (int j=0; j<n; j++){ 
             cout<<endl<<"give arr: ";
             cin >> p[i][j];
-            cout<< p[i][j];
+          
         }
      }
 
+     // printing matrix.
+         cout << "The matrix is:" << endl;
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            cout << p[i][j] << " ";
+        }
+        cout << endl;
+    }
+
      for(int i = 0; i<m ; i++){
-        delete p[i];
+        delete [] p[i];
      }
      delete [] p ;  
 } 

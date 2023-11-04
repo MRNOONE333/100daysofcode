@@ -1,5 +1,5 @@
 // readme cell-5 .
-// syntax in pointers is is written i a particular way because then it will read the adress in thta way only , the starting or most significant bit.
+// syntax in pointers is is written i a particular way because then it will read the address in thta way only , the starting or most significant bit.
 
 
 #include<iostream>
