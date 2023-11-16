@@ -56,3 +56,58 @@
 // 1 2 2
 
 
+#include <iostream>
+#include <unordered_map>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+void printIntersection(const vector<int>& arr1, const vector<int>& arr2) {
+    unordered_map<int, int> freqMap;
+
+    // Count frequency of elements in arr1
+    for (int num : arr1) {
+        freqMap[num]++;
+    }
+
+    // Traverse arr2 and print the common elements
+    for (int num : arr2) {
+        if (freqMap.find(num) != freqMap.end() && freqMap[num] > 0) {
+            cout << num << " ";
+            freqMap[num]--;
+        }
+    }
+
+    cout << endl;
+}
+
+int main() {
+    int t;
+    cin >> t;
+
+    while (t--) {
+        int n;
+        cin >> n;
+
+        vector<int> arr1(n);
+        for (int i = 0; i < n; i++) {
+            cin >> arr1[i];
+        }
+
+        int m;
+        cin >> m;
+
+        vector<int> arr2(m);
+        for (int i = 0; i < m; i++) {
+            cin >> arr2[i];
+        }
+
+        // Sort arr1 to print elements in order of appearance
+        sort(arr1.begin(), arr1.end());
+
+        printIntersection(arr1, arr2);
+    }
+
+    return 0;
+}
